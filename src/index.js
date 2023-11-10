@@ -87,6 +87,7 @@ const buildSpeecher = (model) => {
         if(res.isFinal) {
             messages.push(msg)
             Ret.modelUpdate({lastMessage:msg, messages})
+            Ret.triggerQuery('speechResult');
         }
     }
 
